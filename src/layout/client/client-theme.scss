@@ -1,0 +1,59 @@
+// ==================================================
+// 用户端主题 — 与后台管理端保持一致的蓝色系
+// ==================================================
+@import '@/styles/variables.scss';
+
+$client-color-primary: $menuBg !default;           // #003a8c
+$client-color-primary-light: $menuHover !default;  // #13c2c2
+$client-color-accent: #d4e8f5 !default;
+$client-color-bg: #f0f7ff !default;
+$client-color-surface: #ffffff !default;
+$client-color-text-main: $menuBg !default;
+$client-color-text-secondary: #0050b3 !default;
+$client-color-border: #d4e8f5 !default;
+
+// Layout spacing
+$client-main-gap-top: 16px !default;
+$client-main-gap-bottom: 24px !default;
+$client-main-gap-x: 16px !default;
+
+// Header
+$client-header-bg-start: #ffffff !default;
+$client-header-bg-end: #f0f7ff !default;
+$client-header-shadow: rgba(0, 58, 140, 0.08) !default;
+$client-header-title: $menuBg !default;
+$client-header-menu: #0050b3 !default;
+$client-header-menu-active: $menuBg !default;
+$client-header-menu-hover: $menuHover !default;
+$client-header-menu-line-start: $menuBg !default;
+$client-header-menu-line-end: $menuHover !default;
+
+// Footer
+$client-footer-bg-start: #f0f7ff !default;
+$client-footer-bg-end: #e6f0fa !default;
+$client-footer-border: $client-color-border !default;
+$client-footer-shadow: rgba(0, 58, 140, 0.06) !default;
+$client-footer-title: $menuBg !default;
+$client-footer-text: #0050b3 !default;
+$client-footer-link-hover: $menuHover !default;
+$client-footer-bottom-text: #8cb3d9 !default;
+
+// Profile
+$client-profile-card-bg: $client-color-surface !default;
+$client-profile-card-border: $client-color-border !default;
+$client-profile-card-shadow: rgba(0, 58, 140, 0.08) !default;
+$client-profile-title: $client-color-text-main !default;
+$client-profile-subtitle: $client-color-text-secondary !default;
+$client-profile-label: #0050b3 !default;
+$client-profile-input-border: $client-color-border !default;
+$client-profile-input-focus: $menuHover !default;
+$client-profile-error: #f56c6c !default;
+$client-profile-tab: #0050b3 !default;
+$client-profile-tab-active: $menuBg !default;
+$client-profile-tab-bar: $menuHover !default;
+
+// Primary button
+$client-pink-btn-start: $menuBg !default;
+$client-pink-btn-end: $subMenuBg !default;
+$client-pink-btn-shadow: rgba(0, 58, 140, 0.28) !default;
+$client-pink-btn-hover-shadow: rgba(0, 58, 140, 0.36) !default;

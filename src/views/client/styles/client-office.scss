@@ -1,0 +1,651 @@
+@import '@/layout/client/client-theme.scss';
+
+// PC 优先 · 移动端适配
+$office-breakpoint: 768px;
+
+.office-page {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 32px 48px;
+  min-height: calc(100vh - 84px);
+  box-sizing: border-box;
+}
+
+// ---- 页头 ----
+.office-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $client-color-border;
+
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: $client-color-text-main;
+    line-height: 1.3;
+  }
+
+  p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #909399;
+    line-height: 1.5;
+  }
+
+  .el-button--primary {
+    background: $client-color-primary;
+    border-color: $client-color-primary;
+    padding: 10px 20px;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      background: lighten($client-color-primary, 8%);
+      border-color: lighten($client-color-primary, 8%);
+    }
+  }
+}
+
+// ---- 统计 ----
+.office-stats-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.office-stat-item {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 20px;
+  background: $client-color-surface;
+  border: 1px solid $client-color-border;
+  border-radius: 8px;
+
+  &__num {
+    font-size: 24px;
+    font-weight: 600;
+    color: $client-color-primary;
+    line-height: 1.2;
+  }
+
+  &__text {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #909399;
+  }
+}
+
+// ---- 主内容区 ----
+.office-content {
+  width: 100%;
+  background: $client-color-surface;
+  border: 1px solid $client-color-border;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.office-panel__body {
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.office-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 20px;
+  background: #fafbfc;
+  border-bottom: 1px solid $client-color-border;
+  box-sizing: border-box;
+}
+
+.office-toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.office-toolbar__hint {
+  font-size: 13px;
+  color: #909399;
+}
+
+// ---- Tab ----
+.office-tabs {
+  display: flex;
+  flex: 1;
+  border-bottom: none;
+
+  &__item {
+    position: relative;
+    border: none;
+    background: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #606266;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $client-color-primary;
+    }
+
+    &.active {
+      color: $client-color-primary;
+      font-weight: 600;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: -1px;
+        height: 2px;
+        background: $client-color-primary;
+        border-radius: 1px;
+      }
+    }
+
+    .badge {
+      display: inline-block;
+      min-width: 16px;
+      height: 16px;
+      line-height: 16px;
+      padding: 0 4px;
+      margin-left: 4px;
+      border-radius: 8px;
+      background: #f56c6c;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+  }
+}
+
+// ---- 列表（PC 表格行 / 移动卡片）----
+.office-list {
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+.office-list__head {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background: #f5f7fa;
+  border-bottom: 1px solid $client-color-border;
+  font-size: 13px;
+  font-weight: 600;
+  color: #606266;
+}
+
+.office-list__row {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 14px;
+  color: #303133;
+  transition: background 0.15s;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: #fafcff;
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
+
+  .col-main {
+    min-width: 0;
+
+    .title {
+      font-weight: 500;
+      color: $client-color-text-main;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .sub {
+      margin-top: 2px;
+      font-size: 12px;
+      color: #909399;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .col-muted {
+    color: #606266;
+    font-size: 13px;
+  }
+
+  .col-reason {
+    color: #606266;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .col-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+
+// 请假列表列宽
+.office-list--leave {
+  .office-list__head,
+  .office-list__row {
+    grid-template-columns: 100px 200px 1fr 72px 88px 1.2fr;
+    gap: 16px;
+  }
+}
+
+// 审批列表列宽
+.office-list--approval {
+  .office-list__head,
+  .office-list__row {
+    grid-template-columns: minmax(160px, 2fr) minmax(120px, 1.2fr) 96px minmax(100px, 1fr) minmax(110px, 1fr) 88px;
+    gap: 16px;
+  }
+}
+
+// 日程列表列宽
+.office-list--schedule {
+  .office-list__head,
+  .office-list__row {
+    grid-template-columns: minmax(140px, 1.6fr) minmax(130px, 1fr) minmax(120px, 1.2fr) 88px 88px 100px;
+    gap: 16px;
+  }
+}
+
+// 日期分组
+.office-date-block {
+  width: 100%;
+  border-bottom: 1px solid $client-color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #f5f7fa;
+    font-size: 13px;
+    font-weight: 600;
+    color: $client-color-primary;
+
+    .weekday {
+      font-weight: 400;
+      color: #909399;
+    }
+
+    .count {
+      margin-left: auto;
+      font-weight: 400;
+      color: #909399;
+    }
+  }
+}
+
+// ---- 状态标签 ----
+.status-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+
+  &.pending { color: #d46b08; background: #fff7e6; }
+  &.success { color: #389e0d; background: #f6ffed; }
+  &.danger { color: #cf1322; background: #fff1f0; }
+  &.neutral { color: #8c8c8c; background: #f5f5f5; }
+}
+
+.type-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: $client-color-text-secondary;
+  background: #eef4fb;
+}
+
+// ---- 空状态 ----
+.office-empty {
+  padding: 60px 20px;
+  text-align: center;
+  color: #909399;
+  font-size: 14px;
+
+  i {
+    display: block;
+    font-size: 40px;
+    color: #dcdfe6;
+    margin-bottom: 12px;
+  }
+}
+
+// ---- 审批详情 ----
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.detail-cell {
+  padding: 12px 14px;
+  background: #fafbfc;
+  border: 1px solid #f0f2f5;
+  border-radius: 6px;
+
+  &.full {
+    grid-column: 1 / -1;
+  }
+
+  &__label {
+    font-size: 12px;
+    color: #909399;
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    font-size: 14px;
+    color: #303133;
+    word-break: break-all;
+  }
+}
+
+.section-label {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #303133;
+}
+
+.flow-steps {
+  .flow-step {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 28px;
+      bottom: 0;
+      width: 1px;
+      background: #e4e7ed;
+    }
+
+    &.done .flow-step__dot { background: #67c23a; border-color: #67c23a; color: #fff; }
+    &.reject .flow-step__dot { background: #f56c6c; border-color: #f56c6c; color: #fff; }
+    &.active .flow-step__dot { background: $client-color-primary; border-color: $client-color-primary; color: #fff; }
+  }
+
+  .flow-step__dot {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #dcdfe6;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #c0c4cc;
+  }
+
+  .flow-step__body {
+    flex: 1;
+    min-width: 0;
+    padding-top: 2px;
+  }
+
+  .flow-step__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #303133;
+  }
+
+  .flow-step__state {
+    margin-top: 2px;
+    font-size: 13px;
+    color: #909399;
+  }
+
+  .flow-step__comment {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #fafbfc;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #606266;
+  }
+
+  .flow-step__btns {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+  }
+}
+
+// ---- 弹窗 ----
+::v-deep .office-dialog {
+  border-radius: 8px;
+
+  .el-dialog__header {
+    padding: 16px 20px;
+    border-bottom: 1px solid $client-color-border;
+  }
+
+  .el-dialog__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .el-dialog__body {
+    padding: 20px;
+  }
+
+  .el-dialog__footer {
+    padding: 12px 20px 16px;
+    border-top: 1px solid $client-color-border;
+  }
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+// ---- 移动端 ----
+@media (max-width: $office-breakpoint) {
+  .office-page {
+    padding: 16px 16px 32px;
+  }
+
+  .office-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .el-button {
+      width: 100%;
+    }
+  }
+
+  .office-stats-row {
+    gap: 10px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .office-stat-item {
+    flex: 0 0 auto;
+    min-width: 100px;
+    padding: 12px 14px;
+
+    &__num {
+      font-size: 20px;
+    }
+  }
+
+  .office-toolbar {
+    padding: 12px 14px;
+    flex-direction: column;
+    align-items: stretch;
+
+    .el-select,
+    .el-date-editor {
+      width: 100% !important;
+    }
+  }
+
+  .office-tabs {
+    width: 100%;
+
+    &__item {
+      flex: 1;
+      text-align: center;
+      padding: 10px 8px;
+      font-size: 13px;
+
+      &.active::after {
+        left: 8px;
+        right: 8px;
+      }
+    }
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  // 移动端卡片列表
+  .office-list__row {
+    display: block;
+    padding: 14px 16px;
+
+    .mobile-card__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .mobile-card__title {
+      font-size: 15px;
+      font-weight: 500;
+      color: $client-color-text-main;
+      line-height: 1.4;
+    }
+
+    .mobile-card__sub {
+      margin-top: 4px;
+      font-size: 12px;
+      color: #909399;
+    }
+
+    .mobile-card__info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+      color: #606266;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        i {
+          color: #c0c4cc;
+          width: 14px;
+        }
+      }
+    }
+
+    .mobile-card__reason {
+      margin-top: 10px;
+      padding: 8px 10px;
+      background: #fafbfc;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #606266;
+      line-height: 1.5;
+    }
+
+    .mobile-card__actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #f0f2f5;
+    }
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  ::v-deep .office-dialog {
+    width: 92% !important;
+    margin-top: 8vh !important;
+  }
+}
