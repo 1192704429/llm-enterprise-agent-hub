@@ -16,7 +16,7 @@
 | 用户 | 员工端 | 登录、智能对话、系统公告、请假申请与查询、审批查询、日程管理、个人中心 |
 
 
-![功能模块图](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/azhou_promotion/img/module_structure/func_module_e8625b962100482face5bdf61a95079a.png)
+![功能模块图](docs/images/01-func-module.png)
 
 
 ## 三、技术栈说明
@@ -52,55 +52,55 @@
 
 登录页：管理员登录企业智能办公Agent管理后台
 
-![登录页：管理员登录企业智能办公Agent管理后台](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/0ed30c25-7a5e-4c6d-8ec5-04553c3af096.png)
+![登录页：管理员登录企业智能办公Agent管理后台](docs/images/02-deng-lu.png)
 
 首页：展示系统核心数据与功能快捷入口
 
-![首页：展示系统核心数据与功能快捷入口](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/24d27d3a-42e9-4d17-829e-49b6d484bc07.png)
+![首页：展示系统核心数据与功能快捷入口](docs/images/03-shou-ye.png)
 
 智能办公Agent页：与智能办公Agent对话，处理各类企业办公事务
 
-![智能办公Agent页：与智能办公Agent对话，处理各类企业办公事务](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/a9c37a70-5734-4a7d-83a4-5366fe8267fc.png)
+![智能办公Agent页：与智能办公Agent对话，处理各类企业办公事务](docs/images/04-zhi-neng-ban-gong-agent.png)
 
 智能办公Agent页：AI生成公告，支持保存草稿或发布公告
 
-![智能办公Agent页：AI生成公告，支持保存草稿或发布公告](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/b8d0e729-dc6b-4bba-80d0-c2a671aa73bc.png)
+![智能办公Agent页：AI生成公告，支持保存草稿或发布公告](docs/images/05-zhi-neng-ban-gong-agent.png)
 
 智能办公Agent页：与AI交互生成企业系统维护升级公告
 
-![智能办公Agent页：与AI交互生成企业系统维护升级公告](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/11b934df-590f-405e-8799-9ef95ecb4aa1.png)
+![智能办公Agent页：与AI交互生成企业系统维护升级公告](docs/images/06-zhi-neng-ban-gong-agent.png)
 
 对话记录页：查询并查看用户与AI的历史对话内容
 
-![对话记录页：查询并查看用户与AI的历史对话内容](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/d69543ef-3fae-46ba-83c7-066813c730e9.png)
+![对话记录页：查询并查看用户与AI的历史对话内容](docs/images/07-dui-hua-ji-lu.png)
 
 对话记录列表页：筛选查看用户与AI的交互对话记录
 
-![对话记录列表页：筛选查看用户与AI的交互对话记录](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/210ccdfc-1d93-4309-8be6-0116145414a9.png)
+![对话记录列表页：筛选查看用户与AI的交互对话记录](docs/images/08-dui-hua-ji-lu-lie-biao.png)
 
 数据统计页：查看系统对话相关的统计数据与变化趋势
 
-![数据统计页：查看系统对话相关的统计数据与变化趋势](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/3674a725-52d2-46d1-8b6c-6e54247c2ff6.png)
+![数据统计页：查看系统对话相关的统计数据与变化趋势](docs/images/09-shu-ju-tong-ji.png)
 
 员工管理页：查看、查询并管理企业全体员工信息
 
-![员工管理页：查看、查询并管理企业全体员工信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/09a66587-4210-429e-8f17-ceb67f3e3dc1.png)
+![员工管理页：查看、查询并管理企业全体员工信息](docs/images/10-yuan-gong-guan-li.png)
 
 部门管理页：管理企业部门信息，支持增删改查操作
 
-![部门管理页：管理企业部门信息，支持增删改查操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/4818b8fb-0157-49b2-8f65-a13d888fda11.png)
+![部门管理页：管理企业部门信息，支持增删改查操作](docs/images/11-bu-men-guan-li.png)
 
 公告管理页：管理企业公告，支持增删改、发布、下线操作
 
-![公告管理页：管理企业公告，支持增删改、发布、下线操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/c493faaf-396b-4461-8e7c-b1e795b69e47.png)
+![公告管理页：管理企业公告，支持增删改、发布、下线操作](docs/images/12-gong-gao-guan-li.png)
 
 企业知识库管理页：查看并管理企业知识库的分类与知识
 
-![企业知识库管理页：查看并管理企业知识库的分类与知识](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/0fd36cfd-06e3-4f57-8528-1baef23a53c8.png)
+![企业知识库管理页：查看并管理企业知识库的分类与知识](docs/images/13-qi-ye-zhi-shi-ku-guan-li.png)
 
 大模型配置页：查看和管理大模型配置，切换当前使用模型
 
-![大模型配置页：查看和管理大模型配置，切换当前使用模型](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/5fcc1e58-ef44-4a0d-8d03-049f44ddb569.png)
+![大模型配置页：查看和管理大模型配置，切换当前使用模型](docs/images/14-da-mo-xing-pei-zhi.png)
 
 
 ###### 员工端
@@ -123,43 +123,43 @@
 
 登录页：登录企业智能办公系统，开启智能办公
 
-![登录页：登录企业智能办公系统，开启智能办公](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/f8a90805-7cb0-437d-8c83-0a7462eff186.png)
+![登录页：登录企业智能办公系统，开启智能办公](docs/images/15-deng-lu.png)
 
 智能办公对话页：与智能办公Agent对话，成功提交事假申请
 
-![智能办公对话页：与智能办公Agent对话，成功提交事假申请](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/a9122038-3ca0-40e6-827a-f39c3fd53a5e.png)
+![智能办公对话页：与智能办公Agent对话，成功提交事假申请](docs/images/16-zhi-neng-ban-gong-dui-hua.png)
 
 智能办公对话页：与智能办公AI对话，查询个人请假记录
 
-![智能办公对话页：与智能办公AI对话，查询个人请假记录](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/badce0e9-5df6-40aa-8be8-9b63abbffaff.png)
+![智能办公对话页：与智能办公AI对话，查询个人请假记录](docs/images/17-zhi-neng-ban-gong-dui-hua.png)
 
 智能办公对话页：查询员工信息，查看智能Agent返回结果
 
-![智能办公对话页：查询员工信息，查看智能Agent返回结果](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/0f41def5-2007-47b9-80d0-3fe987b0e8a2.png)
+![智能办公对话页：查询员工信息，查看智能Agent返回结果](docs/images/18-zhi-neng-ban-gong-dui-hua.png)
 
 智能办公对话：与智能办公Agent对话，查询公司介绍信息
 
-![智能办公对话：与智能办公Agent对话，查询公司介绍信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/e24df7c6-8695-445f-86e2-d08ec687a004.png)
+![智能办公对话：与智能办公Agent对话，查询公司介绍信息](docs/images/19-zhi-neng-ban-gong-dui-hua.png)
 
 系统公告列表页：展示企业发布的最新通知与重要公告
 
-![系统公告列表页：展示企业发布的最新通知与重要公告](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/d1aafa0f-b12a-4b66-8157-6b27a58beba8.png)
+![系统公告列表页：展示企业发布的最新通知与重要公告](docs/images/20-xi-tong-gong-gao-lie-biao.png)
 
 请假列表页：查看个人请假申请及对应审批状态
 
-![请假列表页：查看个人请假申请及对应审批状态](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/b6eb598a-1dc8-4c0e-8892-40744efbc771.png)
+![请假列表页：查看个人请假申请及对应审批状态](docs/images/21-qing-jia-lie-biao.png)
 
 审批列表页：查看审批统计信息与个人发起的审批进度
 
-![审批列表页：查看审批统计信息与个人发起的审批进度](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/f4bba73e-42cc-4943-89a3-63b69fcb4d8d.png)
+![审批列表页：查看审批统计信息与个人发起的审批进度](docs/images/22-shen-pi-lie-biao.png)
 
 我的日程：查看统计个人日程，支持新建编辑删除操作
 
-![我的日程：查看统计个人日程，支持新建编辑删除操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/07773ba8-00a5-408c-8f86-d115ba51c536.png)
+![我的日程：查看统计个人日程，支持新建编辑删除操作](docs/images/23-wo-de-ri-cheng.png)
 
 个人中心页：查看修改个人基本信息，管理账户安全设置
 
-![个人中心页：查看修改个人基本信息，管理账户安全设置](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-08-26/47b97087-6571-4310-83af-03dcdc5bc355.png)
+![个人中心页：查看修改个人基本信息，管理账户安全设置](docs/images/24-ge-ren-zhong-xin.png)
 
 
 ## 五、主要业务流程
